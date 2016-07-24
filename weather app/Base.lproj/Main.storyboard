@@ -96,25 +96,24 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AIW-zB-HnE" firstAttribute="top" secondItem="cSK-5Q-vMg" secondAttribute="bottom" constant="8" id="0qp-Ve-a0K"/>
                             <constraint firstItem="oNE-XJ-DED" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="10T-Q7-U6k"/>
                             <constraint firstItem="BHL-oj-3eg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3BU-gb-UpM"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="60Q-ae-IrD"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="trailing" secondItem="oNE-XJ-DED" secondAttribute="trailing" id="6cv-na-OTj"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="top" secondItem="qFc-AM-J10" secondAttribute="bottom" constant="23" id="Bzr-vn-efa"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="centerX" secondItem="BHL-oj-3eg" secondAttribute="centerX" id="CK1-it-EYH"/>
+                            <constraint firstItem="AIW-zB-HnE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dog-mS-LCd"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="220" id="HhG-ww-T8X"/>
-                            <constraint firstItem="AIW-zB-HnE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="270" id="I8r-yD-Hcp"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NpS-c7-2WK"/>
                             <constraint firstItem="BHL-oj-3eg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ODG-rg-knC"/>
+                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VuN-gd-hLK"/>
                             <constraint firstItem="cSK-5Q-vMg" firstAttribute="top" secondItem="QBa-ep-Lqd" secondAttribute="bottom" constant="35" id="XyS-kh-846"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AIW-zB-HnE" secondAttribute="trailing" constant="270" id="aVu-NQ-99m"/>
                             <constraint firstItem="BHL-oj-3eg" firstAttribute="top" secondItem="DUC-Wc-TyT" secondAttribute="bottom" constant="60" id="b1Z-Nf-bcw"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="top" secondItem="BHL-oj-3eg" secondAttribute="bottom" constant="8" symbolic="YES" id="eKO-B7-FSI"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="leading" secondItem="oNE-XJ-DED" secondAttribute="leading" id="gF2-Yk-HPf"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="top" secondItem="oNE-XJ-DED" secondAttribute="bottom" constant="8" symbolic="YES" id="hHz-5M-cUO"/>
-                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psE-Vr-9L5"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="101" id="r17-TN-sDv"/>
-                            <constraint firstItem="AIW-zB-HnE" firstAttribute="top" secondItem="cSK-5Q-vMg" secondAttribute="bottom" constant="8" id="uUj-y9-qEB"/>
                             <constraint firstItem="oNE-XJ-DED" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zqS-sR-eNS"/>
                         </constraints>
                     </view>
@@ -142,7 +141,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-go-LLH">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-go-LLH">
                                 <rect key="frame" x="125" y="192" width="286" height="29"/>
                                 <animations/>
                                 <constraints>
@@ -210,7 +209,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-xM-z17">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-xM-z17">
                                 <rect key="frame" x="250" y="456" width="36" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -227,7 +226,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
                                 <rect key="frame" x="203" y="485" width="83" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -283,7 +282,7 @@
                             <constraint firstItem="wf8-oe-F3n" firstAttribute="trailing" secondItem="zDi-T6-N88" secondAttribute="trailing" id="bxQ-UW-iex"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="top" secondItem="pHz-go-LLH" secondAttribute="bottom" constant="13" id="fns-6g-woT"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="trailing" secondItem="8WE-Lf-9ch" secondAttribute="trailingMargin" id="gf5-o6-IyU"/>
-                            <constraint firstItem="pHz-go-LLH" firstAttribute="centerX" secondItem="8WE-Lf-9ch" secondAttribute="centerX" id="gg1-fB-XCO"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="centerX" secondItem="8WE-Lf-9ch" secondAttribute="centerX" constant="-32" id="gg1-fB-XCO"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="leading" secondItem="asR-i6-CYj" secondAttribute="leading" id="i4D-v7-tdu"/>
                             <constraint firstItem="vLs-NE-EhM" firstAttribute="top" secondItem="nlH-YC-vbN" secondAttribute="bottom" constant="8" id="imB-hq-za0"/>
                             <constraint firstItem="cwp-9C-6YY" firstAttribute="top" secondItem="xtb-DF-Eys" secondAttribute="bottom" constant="8" symbolic="YES" id="ip3-yv-uBv"/>
