@@ -28,5 +28,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let numDays = numDaysLabel.text
+        let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
+        //TODO clean this up?
+        destinationVC.numDays = Int(numDays!)!
+    }
 }
 

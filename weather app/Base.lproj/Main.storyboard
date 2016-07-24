@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="325" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Display Weather View Controller-->
         <scene sceneID="OBA-SV-QHg">
             <objects>
-                <viewController id="Ajo-vJ-Txf" sceneMemberID="viewController">
+                <viewController id="Ajo-vJ-Txf" customClass="DisplayWeatherViewController" customModule="weather_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nlH-YC-vbN"/>
                         <viewControllerLayoutGuide type="bottom" id="a1g-FW-co9"/>

@@ -14,6 +14,7 @@
 		A227C7061D434898008D7E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A227C7051D434898008D7E6A /* Assets.xcassets */; };
 		A227C7091D434898008D7E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A227C7071D434898008D7E6A /* LaunchScreen.storyboard */; };
 		A227C7141D434898008D7E6A /* weather_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227C7131D434898008D7E6A /* weather_appTests.swift */; };
+		A227C7501D457B6C008D7E6A /* DisplayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227C74F1D457B6C008D7E6A /* DisplayWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A227C70F1D434898008D7E6A /* weather appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "weather appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A227C7131D434898008D7E6A /* weather_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather_appTests.swift; sourceTree = "<group>"; };
 		A227C7151D434898008D7E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A227C74F1D457B6C008D7E6A /* DisplayWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayWeatherViewController.swift; path = ../DisplayWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		A227C6FA1D434898008D7E6A /* weather app */ = {
 			isa = PBXGroup;
 			children = (
+				A227C74F1D457B6C008D7E6A /* DisplayWeatherViewController.swift */,
 				A227C6FB1D434898008D7E6A /* AppDelegate.swift */,
 				A227C6FD1D434898008D7E6A /* ViewController.swift */,
 				A227C6FF1D434898008D7E6A /* Main.storyboard */,
@@ -204,6 +207,7 @@
 			files = (
 				A227C7041D434898008D7E6A /* weather_app.xcdatamodeld in Sources */,
 				A227C6FE1D434898008D7E6A /* ViewController.swift in Sources */,
+				A227C7501D457B6C008D7E6A /* DisplayWeatherViewController.swift in Sources */,
 				A227C6FC1D434898008D7E6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +398,7 @@
 				A227C71A1D434898008D7E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A227C71B1D434898008D7E6A /* Build configuration list for PBXNativeTarget "weather appTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +407,7 @@
 				A227C71D1D434898008D7E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
