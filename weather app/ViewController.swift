@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         
         let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
         destinationVC.cityName = cityTextField.text!
-        // Clean this up?
         destinationVC.numDays = Int(numDaysLabel.text!)!
     }
 }
