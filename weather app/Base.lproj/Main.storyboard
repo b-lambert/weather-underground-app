@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WMg-sY-eRs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ajo-vJ-Txf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -142,6 +142,9 @@
                                     <segment title="9"/>
                                     <segment title="10"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectDayValueChanged:" destination="Ajo-vJ-Txf" eventType="valueChanged" id="6JQ-MR-qhf"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfp-Nd-JNW">
                                 <rect key="frame" x="20" y="233" width="560" height="21"/>
@@ -226,6 +229,14 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="vLs-NE-EhM" id="0UY-PD-9Z9"/>
+                        <outlet property="highTempLabel" destination="uBi-uq-FT1" id="su2-Np-jvu"/>
+                        <outlet property="lowTempLabel" destination="zDi-T6-N88" id="Txh-Bn-kQm"/>
+                        <outlet property="selectDaySegmentedControl" destination="pHz-go-LLH" id="n6i-sU-pkm"/>
+                        <outlet property="weatherIcon" destination="xtb-DF-Eys" id="ilM-eB-WMe"/>
+                        <outlet property="weatherStatusLabel" destination="cwp-9C-6YY" id="XAu-AR-ZBP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwf-0p-JGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
