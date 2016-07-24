@@ -11,6 +11,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         getDataButton.enabled = false
     }
+
     @IBAction func endOnExit(sender: AnyObject) {
 
     }
@@ -28,11 +29,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let numDays = numDaysLabel.text
+        
         let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
-        //TODO clean this up?
-        destinationVC.numDays = Int(numDays!)!
+        destinationVC.cityName = cityTextField.text!
+        // Clean this up?
+        destinationVC.numDays = Int(numDaysLabel.text!)!
     }
 }
 

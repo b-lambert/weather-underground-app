@@ -12,6 +12,7 @@ class DisplayWeatherViewController: UIViewController {
     var numDays: Int = 1
     // TODO make this private somehow
     var currentDayIndex: Int = 0
+    var cityName: String = ""
 
     @IBAction func selectDayValueChanged(sender: AnyObject) {
         currentDayIndex = selectDaySegmentedControl.selectedSegmentIndex
@@ -19,6 +20,7 @@ class DisplayWeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        cityNameLabel.text = cityName
         // Do any additional setup after loading the view.
     }
 
