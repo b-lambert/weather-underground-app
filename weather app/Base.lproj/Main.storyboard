@@ -240,27 +240,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLs-NE-EhM">
-                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLs-NE-EhM">
+                                <rect key="frame" x="20" y="72" width="560" height="29"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pick Forecast Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asR-i6-CYj">
-                                <rect key="frame" x="20" y="119" width="137" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Forecast Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asR-i6-CYj">
+                                <rect key="frame" x="20" y="109" width="137" height="20"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="A7b-bB-nXS"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="A7b-bB-nXS"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <animations/>
@@ -273,21 +265,18 @@
                             <constraint firstItem="N1u-xM-z17" firstAttribute="leading" secondItem="8WE-Lf-9ch" secondAttribute="leading" constant="250" id="G6v-b0-LjQ"/>
                             <constraint firstItem="N1u-xM-z17" firstAttribute="top" secondItem="xtb-DF-Eys" secondAttribute="bottom" constant="66" id="IRV-jV-8Oy"/>
                             <constraint firstItem="xtb-DF-Eys" firstAttribute="leading" secondItem="cwp-9C-6YY" secondAttribute="leading" id="JWp-gj-its"/>
-                            <constraint firstItem="asR-i6-CYj" firstAttribute="top" secondItem="8WE-Lf-9ch" secondAttribute="top" constant="119" id="LP4-sa-ZNE"/>
                             <constraint firstItem="asR-i6-CYj" firstAttribute="leading" secondItem="8WE-Lf-9ch" secondAttribute="leadingMargin" id="Pfy-Wg-toE"/>
                             <constraint firstItem="N1u-xM-z17" firstAttribute="firstBaseline" secondItem="wf8-oe-F3n" secondAttribute="firstBaseline" id="Qqe-65-FuF"/>
                             <constraint firstItem="wf8-oe-F3n" firstAttribute="top" secondItem="WLl-TE-Jj5" secondAttribute="bottom" constant="8" symbolic="YES" id="R2t-4H-JyS"/>
-                            <constraint firstItem="asR-i6-CYj" firstAttribute="top" secondItem="vLs-NE-EhM" secondAttribute="bottom" constant="26" id="Tkw-wV-MEb"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="top" secondItem="8WE-Lf-9ch" secondAttribute="top" constant="233" id="Vr9-Og-xoe"/>
                             <constraint firstItem="wf8-oe-F3n" firstAttribute="trailing" secondItem="zDi-T6-N88" secondAttribute="trailing" id="bxQ-UW-iex"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="top" secondItem="pHz-go-LLH" secondAttribute="bottom" constant="13" id="fns-6g-woT"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="trailing" secondItem="8WE-Lf-9ch" secondAttribute="trailingMargin" id="gf5-o6-IyU"/>
-                            <constraint firstItem="pHz-go-LLH" firstAttribute="centerX" secondItem="8WE-Lf-9ch" secondAttribute="centerX" constant="-32" id="gg1-fB-XCO"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="leading" secondItem="asR-i6-CYj" secondAttribute="leading" id="i4D-v7-tdu"/>
                             <constraint firstItem="vLs-NE-EhM" firstAttribute="top" secondItem="nlH-YC-vbN" secondAttribute="bottom" constant="8" id="imB-hq-za0"/>
                             <constraint firstItem="cwp-9C-6YY" firstAttribute="top" secondItem="xtb-DF-Eys" secondAttribute="bottom" constant="8" symbolic="YES" id="ip3-yv-uBv"/>
                             <constraint firstItem="N1u-xM-z17" firstAttribute="centerX" secondItem="pHz-go-LLH" secondAttribute="centerX" id="is2-yX-FY1"/>
-                            <constraint firstItem="pHz-go-LLH" firstAttribute="top" secondItem="asR-i6-CYj" secondAttribute="bottom" constant="8" id="jSm-SK-OHT"/>
+                            <constraint firstItem="asR-i6-CYj" firstAttribute="top" secondItem="vLs-NE-EhM" secondAttribute="bottom" constant="8" id="kHI-dJ-uV2"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="leading" secondItem="xtb-DF-Eys" secondAttribute="leading" id="mKD-8g-KOt"/>
                             <constraint firstItem="zDi-T6-N88" firstAttribute="top" secondItem="wf8-oe-F3n" secondAttribute="bottom" constant="8" symbolic="YES" id="mfp-FS-Jcn"/>
                             <constraint firstItem="uBi-uq-FT1" firstAttribute="top" secondItem="N1u-xM-z17" secondAttribute="bottom" constant="8" symbolic="YES" id="ouU-XZ-xpF"/>
@@ -300,8 +289,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="LP4-sa-ZNE"/>
-                                <exclude reference="jSm-SK-OHT"/>
                                 <exclude reference="pEh-Jx-a51"/>
                             </mask>
                         </variation>
