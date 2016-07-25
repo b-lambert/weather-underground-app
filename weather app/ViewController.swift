@@ -9,7 +9,11 @@ class ViewController: UIViewController {
     @IBOutlet var numDaysSlider: UISlider!
     @IBOutlet var cityTextField: UITextField!
     @IBOutlet var getDataButton: UIButton!
-    
+    @IBOutlet var stateCodeTextField: UITextField!
+
+    @IBAction func stateCodeEditingDidEnd(sender: AnyObject) {
+        getDataButton.enabled = cityTextField.text! != "" && stateCodeTextField.text! != ""
+    }
     //var apiKey = WeatherappKeys()//.WUKey
 
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -25,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func editingChanged(sender: AnyObject) {
-        getDataButton.enabled = cityTextField.text! != ""
+        getDataButton.enabled = cityTextField.text! != "" && stateCodeTextField.text! != ""
     }
     
     @IBAction func daySliderChanged(sender: AnyObject) {
@@ -42,8 +46,9 @@ class ViewController: UIViewController {
         // TODO show spinner
         activityIndicator.startAnimating()
         let apiKey:String = "b2d73d60ea4b959a"
+        let stateCode = stateCodeTextField.text!
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
-        let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/CA/\(cityName).json"
+        let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
         print(url)
         // TODO ERROR HANDLING
 //        TODO need to implement prompting user for state name too :(
