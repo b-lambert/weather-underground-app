@@ -2,6 +2,7 @@ import UIKit
 
 class DisplayWeatherViewController: UIViewController {
     
+    @IBOutlet var pickForecastLabel: UILabel!
     @IBOutlet var highTempLabel: UILabel!
     @IBOutlet var lowTempLabel: UILabel!
     @IBOutlet var cityNameLabel: UILabel!
@@ -20,15 +21,16 @@ class DisplayWeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectDaySegmentedControl.hidden = numDays < 2
+        if numDays < 2 {
+            pickForecastLabel.hidden = true
+            selectDaySegmentedControl.hidden = true
+        }
         cityNameLabel.text = cityName
-            // TODO make it visible
         if numDays > 2 {
             for i in 2...numDays - 1 {
                 selectDaySegmentedControl.insertSegmentWithTitle(String(i + 1), atIndex: i, animated: true)
             }
         }
-        
     }
 
     override func didReceiveMemoryWarning() {

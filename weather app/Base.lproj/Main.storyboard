@@ -142,10 +142,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-go-LLH">
-                                <rect key="frame" x="125" y="192" width="286" height="29"/>
+                                <rect key="frame" x="20" y="192" width="560" height="29"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="286" id="2Z3-hB-hRp"/>
                                     <constraint firstAttribute="height" constant="28" id="n9G-c6-Z2y"/>
                                 </constraints>
                                 <segments>
@@ -201,7 +200,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-xM-z17">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-xM-z17">
                                 <rect key="frame" x="250" y="456" width="36" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -218,7 +217,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="High Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
                                 <rect key="frame" x="203" y="485" width="83" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -264,6 +263,7 @@
                             <constraint firstItem="wf8-oe-F3n" firstAttribute="trailing" secondItem="zDi-T6-N88" secondAttribute="trailing" id="bxQ-UW-iex"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="top" secondItem="pHz-go-LLH" secondAttribute="bottom" constant="13" id="fns-6g-woT"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="trailing" secondItem="8WE-Lf-9ch" secondAttribute="trailingMargin" id="gf5-o6-IyU"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="leading" secondItem="8WE-Lf-9ch" secondAttribute="leadingMargin" id="grE-UV-fFa"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="leading" secondItem="asR-i6-CYj" secondAttribute="leading" id="i4D-v7-tdu"/>
                             <constraint firstItem="vLs-NE-EhM" firstAttribute="top" secondItem="nlH-YC-vbN" secondAttribute="bottom" constant="8" id="imB-hq-za0"/>
                             <constraint firstItem="cwp-9C-6YY" firstAttribute="top" secondItem="xtb-DF-Eys" secondAttribute="bottom" constant="8" symbolic="YES" id="ip3-yv-uBv"/>
@@ -273,6 +273,7 @@
                             <constraint firstItem="zDi-T6-N88" firstAttribute="top" secondItem="wf8-oe-F3n" secondAttribute="bottom" constant="8" symbolic="YES" id="mfp-FS-Jcn"/>
                             <constraint firstItem="uBi-uq-FT1" firstAttribute="top" secondItem="N1u-xM-z17" secondAttribute="bottom" constant="8" symbolic="YES" id="ouU-XZ-xpF"/>
                             <constraint firstAttribute="bottom" secondItem="WLl-TE-Jj5" secondAttribute="bottom" constant="152" id="pEh-Jx-a51"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="trailing" secondItem="8WE-Lf-9ch" secondAttribute="trailingMargin" id="pxp-va-ng5"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="trailing" secondItem="vLs-NE-EhM" secondAttribute="trailing" id="s95-w6-vmc"/>
                             <constraint firstItem="wf8-oe-F3n" firstAttribute="leading" secondItem="8WE-Lf-9ch" secondAttribute="leadingMargin" constant="69" id="wM0-Ch-4SA"/>
                             <constraint firstItem="xtb-DF-Eys" firstAttribute="leading" secondItem="WLl-TE-Jj5" secondAttribute="leading" id="x04-G4-cDE"/>
@@ -291,6 +292,7 @@
                         <outlet property="cityNameLabel" destination="vLs-NE-EhM" id="0UY-PD-9Z9"/>
                         <outlet property="highTempLabel" destination="uBi-uq-FT1" id="su2-Np-jvu"/>
                         <outlet property="lowTempLabel" destination="zDi-T6-N88" id="Txh-Bn-kQm"/>
+                        <outlet property="pickForecastLabel" destination="asR-i6-CYj" id="bzS-zx-o6a"/>
                         <outlet property="selectDaySegmentedControl" destination="pHz-go-LLH" id="n6i-sU-pkm"/>
                         <outlet property="weatherIcon" destination="xtb-DF-Eys" id="ilM-eB-WMe"/>
                         <outlet property="weatherStatusLabel" destination="cwp-9C-6YY" id="XAu-AR-ZBP"/>
