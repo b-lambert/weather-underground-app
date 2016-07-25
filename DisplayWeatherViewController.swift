@@ -19,9 +19,18 @@ class DisplayWeatherViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        //TODO make segmentControl hidden by default
         super.viewDidLoad()
         cityNameLabel.text = cityName
-        // Do any additional setup after loading the view.
+        if numDays > 1 {
+            // TODO make it visible
+            if numDays > 2 {
+                for i in 2...numDays - 1 {
+                    selectDaySegmentedControl.insertSegmentWithTitle(String(i + 1), atIndex: i, animated: true)
+                }
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

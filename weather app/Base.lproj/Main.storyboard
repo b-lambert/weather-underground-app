@@ -151,14 +151,6 @@
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
-                                    <segment title="3"/>
-                                    <segment title="4"/>
-                                    <segment title="5"/>
-                                    <segment title="6"/>
-                                    <segment title="7"/>
-                                    <segment title="8"/>
-                                    <segment title="9"/>
-                                    <segment title="10"/>
                                 </segments>
                                 <variation key="default">
                                     <mask key="constraints">
