@@ -1,7 +1,8 @@
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
+
+inhibit_all_warnings!
 use_frameworks!
 
 target 'weather app' do
-    pod 'Alamofire', '~> 3.0'
+    pod 'Alamofire', '~> 3.1.2'
 end
