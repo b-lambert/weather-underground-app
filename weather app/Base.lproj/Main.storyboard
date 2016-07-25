@@ -89,6 +89,7 @@
                                 <animations/>
                                 <state key="normal" title="Get Data"/>
                                 <connections>
+                                    <action selector="getDataButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hgm-pT-2xs"/>
                                     <segue destination="Ajo-vJ-Txf" kind="show" id="5AT-qO-cJH"/>
                                 </connections>
                             </button>
@@ -119,6 +120,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Weather App" id="Ahv-w1-Xks"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="AIW-zB-HnE" id="xbN-El-aWp"/>
                         <outlet property="cityTextField" destination="DUC-Wc-TyT" id="5tT-V3-tgn"/>
                         <outlet property="getDataButton" destination="cSK-5Q-vMg" id="BQJ-9X-ckN"/>
                         <outlet property="numDaysLabel" destination="qFc-AM-J10" id="dna-RI-vQh"/>
