@@ -51,9 +51,7 @@ class ViewController: UIViewController {
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
         //let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
         let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
-        //print(url)
         // TODO ERROR HANDLING
-//        TODO need to implement prompting user for state name too :(
  
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
@@ -62,16 +60,26 @@ class ViewController: UIViewController {
                 //print(days)
                 // TODO: Iterate over days, store data into string:string hash
                 var forecastData = [[String: String]()]
+                var currentDayIndex:Int = 0
                 for (key, subJson):(String, JSON) in days{
                     var todaysData = [String: String]()
                     //var _day = day as! JSON
-                    print(subJson["high"]["celsius"])
+                    print(subJson)
+                    todaysData["high"] = subJson["high"]["fahrenheit"].string
+                    todaysData["low"] = subJson["low"]["fahrenheit"].string
+                    todaysData["conditions"] = subJson["conditions"].string
+                    todaysData["icon_url"] = subJson["icon_url"].string
                     //let conditions:String = day["conditions"].string
                     //todaysData["conditions"] = conditions
                     //todaysData["low"] = day["low"]!["celsius"] as! String//["celsius"]
                     forecastData.append(todaysData)
+                    currentDayIndex += 1
+                    // Don't send more data than user requested
+                    if currentDayIndex >= Int(self.numDaysLabel.text!) {
+                        break
+                    }
                 }
-                //print(forecastData)
+                print(forecastData)
                 //print(json)
 
         }
