@@ -1,6 +1,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+// TODO remove
 import Keys
 
 class ViewController: UIViewController {
@@ -48,15 +49,30 @@ class ViewController: UIViewController {
         let apiKey:String = "b2d73d60ea4b959a"
         let stateCode = stateCodeTextField.text!
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
-        let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
-        print(url)
+        //let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
+        let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
+        //print(url)
         // TODO ERROR HANDLING
 //        TODO need to implement prompting user for state name too :(
  
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
                 var json = JSON(data: data!)
-                print(json)
+                let days = json["forecast"]["simpleforecast"]["forecastday"]//.rawValue as! NSMutableArray
+                //print(days)
+                // TODO: Iterate over days, store data into string:string hash
+                var forecastData = [[String: String]()]
+                for day in days{
+                    var todaysData = [String: String]()
+                    var _day = day as! JSON
+                    print(day.1["high"]["celsius"])
+                    //let conditions:String = day["conditions"].string
+                    //todaysData["conditions"] = conditions
+                    //todaysData["low"] = day["low"]!["celsius"] as! String//["celsius"]
+                    forecastData.append(todaysData)
+                }
+                //print(forecastData)
+                //print(json)
 
         }
 
