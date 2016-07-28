@@ -59,7 +59,7 @@ class ViewController: UIViewController {
                 let days = json["forecast"]["simpleforecast"]["forecastday"]//.rawValue as! NSMutableArray
                 //print(days)
                 // TODO: Iterate over days, store data into string:string hash
-                var forecastData = [[String: String]()]
+                var forecastData = [[String: String]]()
                 var currentDayIndex:Int = 0
                 for (key, subJson):(String, JSON) in days{
                     var todaysData = [String: String]()
