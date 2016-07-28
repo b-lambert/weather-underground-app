@@ -62,10 +62,10 @@ class ViewController: UIViewController {
                 //print(days)
                 // TODO: Iterate over days, store data into string:string hash
                 var forecastData = [[String: String]()]
-                for day in days{
+                for (key, subJson):(String, JSON) in days{
                     var todaysData = [String: String]()
-                    var _day = day as! JSON
-                    print(day.1["high"]["celsius"])
+                    //var _day = day as! JSON
+                    print(subJson["high"]["celsius"])
                     //let conditions:String = day["conditions"].string
                     //todaysData["conditions"] = conditions
                     //todaysData["low"] = day["low"]!["celsius"] as! String//["celsius"]
