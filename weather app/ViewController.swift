@@ -39,12 +39,12 @@ class ViewController: UIViewController {
  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // TODO remove me
     @IBAction func getDataButtonPressed(sender: AnyObject) {
-
+        activityIndicator.startAnimating()
+        activityIndicator.hidden = false
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -52,12 +52,11 @@ class ViewController: UIViewController {
         let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
         destinationVC.cityName = self.cityTextField.text!
         destinationVC.numDays = Int(self.numDaysLabel.text!)!
-        activityIndicator.startAnimating()
         let apiKey:String = "b2d73d60ea4b959a"
         let stateCode = stateCodeTextField.text!
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
-        //let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
-        let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
+        let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
+        //let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
         // TODO ERROR HANDLING
         
         Alamofire.request(.GET, url)
