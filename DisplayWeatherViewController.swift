@@ -14,9 +14,16 @@ class DisplayWeatherViewController: UIViewController {
     // TODO make this private somehow
     var currentDayIndex: Int = 0
     var cityName: String = ""
+    var forecastData: [[String: String]] = []
 
     @IBAction func selectDayValueChanged(sender: AnyObject) {
         currentDayIndex = selectDaySegmentedControl.selectedSegmentIndex
+        highTempLabel.text = forecastData[currentDayIndex]["high"]
+        lowTempLabel.text = forecastData[currentDayIndex]["low"]
+        weatherStatusLabel.text = forecastData[currentDayIndex]["conditions"]
+        requestImage(forecastData[currentDayIndex]["icon_url"]!) { (image) -> Void in
+            self.weatherIcon.image = image
+        }
     }
 
     override func viewDidLoad() {
@@ -35,7 +42,29 @@ class DisplayWeatherViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+    func requestImage(url: String, success: (UIImage?) -> Void) {
+        print("called request image")
+        requestURL(url, success: { (data) -> Void in
+            if let d = data {
+                success(UIImage(data: d))
+            }
+        })
+    }
+
+    func requestURL(url: String, success: (NSData?) -> Void, error: ((NSError) -> Void)? = nil) {
+        print("called request URL")
+        NSURLConnection.sendAsynchronousRequest(
+            NSURLRequest(URL: NSURL (string: url)!),
+            queue: NSOperationQueue.mainQueue(),
+            completionHandler: { response, data, err in
+                if let e = err {
+                    error?(e)
+                } else {
+                    success(data)
+                }
+        })
     }
 
 }

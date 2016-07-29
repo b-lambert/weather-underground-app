@@ -204,7 +204,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-DF-Eys">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tstorms.gif" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-DF-Eys">
                                 <rect key="frame" x="20" y="262" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -332,4 +332,7 @@
             <point key="canvasLocation" x="1004" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tstorms.gif" width="50" height="50"/>
+    </resources>
 </document>
