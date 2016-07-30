@@ -10,6 +10,7 @@ class ViewController: UIViewController {
     @IBOutlet var getDataButton: UIButton!
     @IBOutlet var stateCodeTextField: UITextField!
 
+    @IBOutlet var errorMessageLabel: UILabel!
     var forecastData: [[String: String]] = []
 
     @IBAction func stateCodeEditingDidEnd(sender: AnyObject) {
@@ -19,8 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        activityIndicator.stopAnimating()
+        errorMessageLabel.text = ""
+        errorMessageLabel.hidden = true
         getDataButton.enabled = false
     }
 
@@ -41,43 +42,55 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // TODO remove me
     @IBAction func getDataButtonPressed(sender: AnyObject) {
-        activityIndicator.startAnimating()
-        activityIndicator.hidden = false
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // TODO show spinner
-        let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
-        destinationVC.cityName = self.cityTextField.text!
-        destinationVC.numDays = Int(self.numDaysLabel.text!)!
+        errorMessageLabel.text = ""
+        errorMessageLabel.hidden = true
         let apiKey:String = "b2d73d60ea4b959a"
         let stateCode = stateCodeTextField.text!
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
         let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
         //let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
-        // TODO ERROR HANDLING
-        
+
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
                 var json = JSON(data: data!)
-                let days = json["forecast"]["simpleforecast"]["forecastday"]
-                var currentDayIndex:Int = 0
-                for (key, subJson):(String, JSON) in days{
-                    var todaysData = [String: String]()
-                    todaysData["high"] = subJson["high"]["fahrenheit"].string
-                    todaysData["low"] = subJson["low"]["fahrenheit"].string
-                    todaysData["conditions"] = subJson["conditions"].string
-                    todaysData["icon_url"] = subJson["icon_url"].string
-                    self.forecastData.append(todaysData)
-                    currentDayIndex += 1
-                    if currentDayIndex >= Int(self.numDaysLabel.text!) {
-                        break
+                //print(json["response"]["error"])
+                let error = json["response"]["error"]
+                print(error.error)
+                if(error.error != nil) {
+                    print("entered valid data")
+                    let days = json["forecast"]["simpleforecast"]["forecastday"]
+                    var currentDayIndex:Int = 0
+                    for (key, subJson):(String, JSON) in days{
+                        var todaysData = [String: String]()
+                        todaysData["high"] = subJson["high"]["fahrenheit"].string
+                        todaysData["low"] = subJson["low"]["fahrenheit"].string
+                        todaysData["conditions"] = subJson["conditions"].string
+                        todaysData["icon_url"] = subJson["icon_url"].string
+                        self.forecastData.append(todaysData)
+                        currentDayIndex += 1
+                        if currentDayIndex >= Int(self.numDaysLabel.text!) {
+                            break
+                        }
                     }
+                    
+                    self.performSegueWithIdentifier("displayWeatherSegue", sender: sender)
                 }
-        destinationVC.forecastData = self.forecastData
-        self.activityIndicator.stopAnimating()
+                else {
+                    self.errorMessageLabel.text = json["response"]["error"]["description"].string
+                    self.errorMessageLabel.hidden = false
+                    print("entered bad data")
+                }
     }
-    }}
 
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // TODO show spinner
+        let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
+        destinationVC.cityName = self.cityTextField.text!
+        destinationVC.numDays = Int(self.numDaysLabel.text!)!
+        
+
+        destinationVC.forecastData = self.forecastData
+        }
+    }
+}

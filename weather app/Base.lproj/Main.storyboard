@@ -62,10 +62,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AIW-zB-HnE">
-                                <rect key="frame" x="290" y="367" width="20" height="20"/>
-                                <animations/>
-                            </activityIndicatorView>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="QBa-ep-Lqd">
                                 <rect key="frame" x="18" y="264" width="564" height="31"/>
                                 <animations/>
@@ -79,7 +75,6 @@
                                 <state key="normal" title="Get Data"/>
                                 <connections>
                                     <action selector="getDataButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hgm-pT-2xs"/>
-                                    <segue destination="Ajo-vJ-Txf" kind="show" id="5AT-qO-cJH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a State Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcd-la-IAV">
@@ -113,11 +108,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter a valid state and city." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-PU-w2q">
+                                <rect key="frame" x="171" y="367" width="259" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AIW-zB-HnE" firstAttribute="top" secondItem="cSK-5Q-vMg" secondAttribute="bottom" constant="8" id="0qp-Ve-a0K"/>
                             <constraint firstItem="oNE-XJ-DED" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="10T-Q7-U6k"/>
                             <constraint firstItem="BHL-oj-3eg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3BU-gb-UpM"/>
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="leading" secondItem="BHL-oj-3eg" secondAttribute="leading" id="4aC-iK-KH6"/>
@@ -126,10 +127,11 @@
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="top" secondItem="Kcd-la-IAV" secondAttribute="bottom" constant="8" id="6fT-Mm-Fat"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="top" secondItem="qFc-AM-J10" secondAttribute="bottom" constant="23" id="Bzr-vn-efa"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="centerX" secondItem="BHL-oj-3eg" secondAttribute="centerX" id="CK1-it-EYH"/>
-                            <constraint firstItem="AIW-zB-HnE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dog-mS-LCd"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="top" secondItem="BHL-oj-3eg" secondAttribute="bottom" constant="8" id="FTc-32-aYn"/>
+                            <constraint firstItem="Coc-PU-w2q" firstAttribute="top" secondItem="cSK-5Q-vMg" secondAttribute="bottom" constant="8" id="KkN-i0-WOQ"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NpS-c7-2WK"/>
                             <constraint firstItem="BHL-oj-3eg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ODG-rg-knC"/>
+                            <constraint firstItem="Coc-PU-w2q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QJD-jH-jyl"/>
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="top" secondItem="Kcd-la-IAV" secondAttribute="bottom" constant="8" symbolic="YES" id="UNE-Tg-Opi"/>
                             <constraint firstItem="cSK-5Q-vMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VuN-gd-hLK"/>
                             <constraint firstItem="cSK-5Q-vMg" firstAttribute="top" secondItem="QBa-ep-Lqd" secondAttribute="bottom" constant="35" id="XyS-kh-846"/>
@@ -146,17 +148,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Weather App" id="Ahv-w1-Xks"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="AIW-zB-HnE" id="xbN-El-aWp"/>
                         <outlet property="cityTextField" destination="DUC-Wc-TyT" id="5tT-V3-tgn"/>
+                        <outlet property="errorMessageLabel" destination="Coc-PU-w2q" id="Dei-ay-Lxs"/>
                         <outlet property="getDataButton" destination="cSK-5Q-vMg" id="BQJ-9X-ckN"/>
                         <outlet property="numDaysLabel" destination="qFc-AM-J10" id="dna-RI-vQh"/>
                         <outlet property="numDaysSlider" destination="QBa-ep-Lqd" id="KEL-bi-uXe"/>
                         <outlet property="stateCodeTextField" destination="eLZ-Jg-12c" id="Ocj-Rd-FvY"/>
+                        <segue destination="Ajo-vJ-Txf" kind="show" identifier="displayWeatherSegue" id="881-wD-kXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="387"/>
+            <point key="canvasLocation" x="313" y="387"/>
         </scene>
         <!--Display Weather View Controller-->
         <scene sceneID="OBA-SV-QHg">
