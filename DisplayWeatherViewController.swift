@@ -15,13 +15,7 @@ class DisplayWeatherViewController: UIViewController {
     var forecastData: [[String: String]] = []
 
     @IBAction func selectDayValueChanged(sender: AnyObject) {
-        let currentDay = forecastData[selectDaySegmentedControl.selectedSegmentIndex]
-        highTempLabel.text = currentDay["high"]
-        lowTempLabel.text = currentDay["low"]
-        weatherStatusLabel.text = currentDay["conditions"]
-        requestImage(currentDay["icon_url"]!) { (image) -> Void in
-            self.weatherIcon.image = image
-        }
+        displayWeatherByDay(selectDaySegmentedControl.selectedSegmentIndex)
     }
 
     override func viewDidLoad() {
@@ -36,6 +30,17 @@ class DisplayWeatherViewController: UIViewController {
                 selectDaySegmentedControl.insertSegmentWithTitle(String(i + 1), atIndex: i, animated: true)
             }
         }
+        displayWeatherByDay(0)
+    }
+    
+    func displayWeatherByDay(dayIndex: Int) {
+        let currentDay = forecastData[dayIndex]
+        requestImage(currentDay["icon_url"]!) { (image) -> Void in
+            self.weatherIcon.image = image
+        }
+        highTempLabel.text = currentDay["high"]
+        lowTempLabel.text = currentDay["low"]
+        weatherStatusLabel.text = currentDay["conditions"]
     }
 
     override func didReceiveMemoryWarning() {

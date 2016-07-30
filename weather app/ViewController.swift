@@ -54,11 +54,8 @@ class ViewController: UIViewController {
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
                 var json = JSON(data: data!)
-                //print(json["response"]["error"])
                 let error = json["response"]["error"]
-                print(error.error)
                 if(error.error != nil) {
-                    print("entered valid data")
                     let days = json["forecast"]["simpleforecast"]["forecastday"]
                     var currentDayIndex:Int = 0
                     for (key, subJson):(String, JSON) in days{
@@ -74,23 +71,21 @@ class ViewController: UIViewController {
                         }
                     }
                     
+                    
                     self.performSegueWithIdentifier("displayWeatherSegue", sender: sender)
                 }
                 else {
                     self.errorMessageLabel.text = json["response"]["error"]["description"].string
                     self.errorMessageLabel.hidden = false
-                    print("entered bad data")
+                    self.getDataButton.enabled = false
                 }
-    }
+            }
+        }
 
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // TODO show spinner
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
         destinationVC.cityName = self.cityTextField.text!
         destinationVC.numDays = Int(self.numDaysLabel.text!)!
-        
-
         destinationVC.forecastData = self.forecastData
-        }
     }
 }
