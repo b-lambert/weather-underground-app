@@ -10,9 +10,9 @@ class DisplayWeatherViewController: UIViewController {
     @IBOutlet var weatherIcon: UIImageView!
     @IBOutlet var weatherStatusLabel: UILabel!
 
-    var numDays: Int = 1
-    var cityName: String = ""
-    var forecastData: [[String: String]] = []
+    var numDays:Int = 1
+    var cityName:String = ""
+    var forecastData:[[String:String]] = []
 
     @IBAction func selectDayValueChanged(sender: AnyObject) {
         displayWeatherByDay(selectDaySegmentedControl.selectedSegmentIndex)
@@ -34,7 +34,7 @@ class DisplayWeatherViewController: UIViewController {
     }
     
     func displayWeatherByDay(dayIndex: Int) {
-        let currentDay = forecastData[dayIndex]
+        let currentDay:[String:String] = forecastData[dayIndex]
         requestImage(currentDay["icon_url"]!) { (image) -> Void in
             self.weatherIcon.image = image
         }

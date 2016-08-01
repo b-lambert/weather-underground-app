@@ -9,9 +9,9 @@ class ViewController: UIViewController {
     @IBOutlet var cityTextField: UITextField!
     @IBOutlet var getDataButton: UIButton!
     @IBOutlet var stateCodeTextField: UITextField!
-
     @IBOutlet var errorMessageLabel: UILabel!
-    var forecastData: [[String: String]] = []
+
+    var forecastData:[[String: String]] = []
 
     @IBAction func stateCodeEditingDidEnd(sender: AnyObject) {
         getDataButton.enabled = cityTextField.text! != "" && stateCodeTextField.text! != ""
@@ -46,17 +46,17 @@ class ViewController: UIViewController {
         errorMessageLabel.hidden = true
         // Note: Hard-coding this for simplicity but for real projects, API keys would be obscured in a config file not stored in revision control.
         let apiKey:String = "b2d73d60ea4b959a"
-        let stateCode = stateCodeTextField.text!
-        let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
+        let stateCode:String = stateCodeTextField.text!
+        let cityName:String = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
         let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
         //let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
 
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
-                var json = JSON(data: data!)
-                let error = json["response"]["error"]
+                let json:JSON = JSON(data: data!)
+                let error:JSON = json["response"]["error"]
                 if(error.error != nil) {
-                    let days = json["forecast"]["simpleforecast"]["forecastday"]
+                    let days:JSON = json["forecast"]["simpleforecast"]["forecastday"]
                     var currentDayIndex:Int = 0
                     for (key, subJson):(String, JSON) in days{
                         var todaysData = [String: String]()
