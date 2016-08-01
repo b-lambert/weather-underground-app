@@ -34,7 +34,7 @@ class DisplayWeatherViewController: UIViewController {
     }
     
     func displayWeatherByDay(dayIndex: Int) {
-        let currentDay:[String:String] = forecastData[dayIndex]
+        let currentDay = forecastData[dayIndex]
         requestImage(currentDay["icon_url"]!) { (image) -> Void in
             self.weatherIcon.image = image
         }

@@ -184,11 +184,11 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-DF-Eys">
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-DF-Eys">
                                 <rect key="frame" x="20" y="207" width="137" height="128"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-9C-6YY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weather Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-9C-6YY">
                                 <rect key="frame" x="20" y="349" width="118" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -198,7 +198,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-T6-N88">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Low:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-T6-N88">
                                 <rect key="frame" x="20" y="378" width="137" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -236,7 +236,7 @@
                                     <action selector="selectDayValueChanged:" destination="Ajo-vJ-Txf" eventType="valueChanged" id="6JQ-MR-qhf"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="High:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-uq-FT1">
                                 <rect key="frame" x="20" y="407" width="137" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -250,16 +250,15 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pHz-go-LLH" firstAttribute="top" secondItem="asR-i6-CYj" secondAttribute="bottom" constant="7" id="1f1-Jg-fry"/>
                             <constraint firstItem="asR-i6-CYj" firstAttribute="trailing" secondItem="xtb-DF-Eys" secondAttribute="trailing" id="3Ud-bF-f1p"/>
                             <constraint firstItem="asR-i6-CYj" firstAttribute="leading" secondItem="vLs-NE-EhM" secondAttribute="leading" id="BLD-wO-Sm1"/>
                             <constraint firstItem="zDi-T6-N88" firstAttribute="top" secondItem="cwp-9C-6YY" secondAttribute="bottom" constant="8" symbolic="YES" id="CzQ-F1-XZP"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="leading" secondItem="pHz-go-LLH" secondAttribute="leading" id="FjP-Jn-XJ6"/>
                             <constraint firstItem="uBi-uq-FT1" firstAttribute="leading" secondItem="zDi-T6-N88" secondAttribute="leading" id="NUc-RF-JcF"/>
-                            <constraint firstItem="a1g-FW-co9" firstAttribute="top" secondItem="uBi-uq-FT1" secondAttribute="bottom" constant="128" id="PBQ-HQ-yRT"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="leading" secondItem="8WE-Lf-9ch" secondAttribute="leadingMargin" id="Nqc-dW-6tA"/>
                             <constraint firstItem="uBi-uq-FT1" firstAttribute="top" secondItem="zDi-T6-N88" secondAttribute="bottom" constant="8" symbolic="YES" id="SD9-VQ-yKH"/>
-                            <constraint firstItem="pHz-go-LLH" firstAttribute="leading" secondItem="asR-i6-CYj" secondAttribute="leading" id="WRh-U2-YQz"/>
                             <constraint firstItem="vLs-NE-EhM" firstAttribute="top" secondItem="nlH-YC-vbN" secondAttribute="bottom" constant="8" symbolic="YES" id="X5j-tB-nuJ"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="trailing" secondItem="8WE-Lf-9ch" secondAttribute="trailingMargin" id="Ygm-hk-Ff4"/>
                             <constraint firstItem="xtb-DF-Eys" firstAttribute="top" secondItem="Jfp-Nd-JNW" secondAttribute="bottom" constant="8" symbolic="YES" id="Zh7-HX-qmL"/>
                             <constraint firstItem="zDi-T6-N88" firstAttribute="trailing" secondItem="xtb-DF-Eys" secondAttribute="trailing" id="ahp-8R-Mud"/>
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="trailing" secondItem="pHz-go-LLH" secondAttribute="trailing" id="bDz-VJ-KWq"/>
@@ -273,6 +272,7 @@
                             <constraint firstItem="Jfp-Nd-JNW" firstAttribute="top" secondItem="pHz-go-LLH" secondAttribute="bottom" constant="13" id="wo7-tV-frv"/>
                             <constraint firstItem="asR-i6-CYj" firstAttribute="top" secondItem="vLs-NE-EhM" secondAttribute="bottom" constant="8" symbolic="YES" id="wu8-pA-NtV"/>
                             <constraint firstItem="uBi-uq-FT1" firstAttribute="trailing" secondItem="zDi-T6-N88" secondAttribute="trailing" id="xo2-j3-UWI"/>
+                            <constraint firstItem="pHz-go-LLH" firstAttribute="top" secondItem="asR-i6-CYj" secondAttribute="bottom" constant="7" id="zRk-Zx-vcC"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

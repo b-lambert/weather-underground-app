@@ -66,7 +66,7 @@ class ViewController: UIViewController {
                         todaysData["icon_url"] = subJson["icon_url"].string
                         self.forecastData.append(todaysData)
                         currentDayIndex += 1
-                        if currentDayIndex >= Int(self.numDaysLabel.text!) {
+                        if currentDayIndex >= Int(self.numDaysSlider.value) {
                             break
                         }
                     }
