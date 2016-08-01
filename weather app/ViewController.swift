@@ -58,7 +58,7 @@ class ViewController: UIViewController {
                 if(error.error != nil) {
                     let days:JSON = json["forecast"]["simpleforecast"]["forecastday"]
                     var currentDayIndex:Int = 0
-                    for (key, subJson):(String, JSON) in days{
+                    for (_, subJson):(String, JSON) in days{
                         var todaysData = [String: String]()
                         todaysData["high"] = subJson["high"]["fahrenheit"].string
                         todaysData["low"] = subJson["low"]["fahrenheit"].string
