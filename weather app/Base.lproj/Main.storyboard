@@ -127,16 +127,15 @@
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HIb-a4-sYm"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hf9-PJ-zWA"/>
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQf-6a-5hw"/>
-                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="250" id="LQL-fW-DlK"/>
-                            <constraint firstItem="QBa-ep-Lqd" firstAttribute="top" secondItem="qFc-AM-J10" secondAttribute="bottom" constant="8" id="X7S-JZ-nWm"/>
+                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NYq-S4-cVc"/>
                             <constraint firstItem="DUC-Wc-TyT" firstAttribute="top" secondItem="oNE-XJ-DED" secondAttribute="bottom" constant="8" id="X8H-E5-8sc"/>
                             <constraint firstItem="oNE-XJ-DED" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aH6-4I-A3K"/>
+                            <constraint firstItem="QBa-ep-Lqd" firstAttribute="top" secondItem="qFc-AM-J10" secondAttribute="bottom" constant="8" id="dKt-9C-ws7"/>
                             <constraint firstItem="Kcd-la-IAV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="200" id="hrs-2x-rCp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cSK-5Q-vMg" secondAttribute="trailing" constant="249" id="iyh-3Q-U1u"/>
                             <constraint firstItem="QBa-ep-Lqd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jM7-jy-04x"/>
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kZF-Gu-hYe"/>
                             <constraint firstItem="qFc-AM-J10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m2I-KV-UkF"/>
-                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="top" secondItem="QBa-ep-Lqd" secondAttribute="bottom" constant="8" id="mov-Lk-zGL"/>
+                            <constraint firstItem="cSK-5Q-vMg" firstAttribute="top" secondItem="QBa-ep-Lqd" secondAttribute="bottom" constant="8" id="ou9-b2-96i"/>
                             <constraint firstItem="Coc-PU-w2q" firstAttribute="top" secondItem="cSK-5Q-vMg" secondAttribute="bottom" constant="8" id="qFb-K8-ko0"/>
                             <constraint firstItem="eLZ-Jg-12c" firstAttribute="top" secondItem="Kcd-la-IAV" secondAttribute="bottom" constant="8" id="vgv-Va-7LQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kcd-la-IAV" secondAttribute="trailing" constant="198" id="yTm-em-ZxY"/>
