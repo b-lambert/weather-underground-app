@@ -34,8 +34,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func daySliderChanged(sender: AnyObject) {
-        let numDays = Int(numDaysSlider.value)
-        numDaysLabel.text = String(numDays)
+        numDaysLabel.text = "Days to forecast: \(Int(numDaysSlider.value))"
     }
  
     override func didReceiveMemoryWarning() {
@@ -45,6 +44,7 @@ class ViewController: UIViewController {
     @IBAction func getDataButtonPressed(sender: AnyObject) {
         errorMessageLabel.text = ""
         errorMessageLabel.hidden = true
+        // Note: Hard-coding this for simplicity but for real projects, API keys would be obscured in a config file not stored in revision control.
         let apiKey:String = "b2d73d60ea4b959a"
         let stateCode = stateCodeTextField.text!
         let cityName = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
@@ -71,7 +71,6 @@ class ViewController: UIViewController {
                         }
                     }
                     
-                    
                     self.performSegueWithIdentifier("displayWeatherSegue", sender: sender)
                 }
                 else {
@@ -85,7 +84,7 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let destinationVC = segue.destinationViewController as! DisplayWeatherViewController
         destinationVC.cityName = self.cityTextField.text!
-        destinationVC.numDays = Int(self.numDaysLabel.text!)!
+        destinationVC.numDays = Int(numDaysSlider.value)
         destinationVC.forecastData = self.forecastData
     }
 }

@@ -38,8 +38,8 @@ class DisplayWeatherViewController: UIViewController {
         requestImage(currentDay["icon_url"]!) { (image) -> Void in
             self.weatherIcon.image = image
         }
-        highTempLabel.text = currentDay["high"]
-        lowTempLabel.text = currentDay["low"]
+        highTempLabel.text = "High: \(currentDay["high"]!)°F"
+        lowTempLabel.text = "Low: \(currentDay["low"]!)°F"
         weatherStatusLabel.text = currentDay["conditions"]
     }
 
