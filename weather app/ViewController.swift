@@ -2,6 +2,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+// TODO rename this class to something more descriptive
 class ViewController: UIViewController {
     
     @IBOutlet var numDaysLabel: UILabel!
@@ -44,12 +45,10 @@ class ViewController: UIViewController {
     @IBAction func getDataButtonPressed(sender: AnyObject) {
         errorMessageLabel.text = ""
         errorMessageLabel.hidden = true
-        // Note: Hard-coding this for simplicity but for real projects, API keys would be obscured in a config file not stored in revision control.
         let apiKey:String = "b2d73d60ea4b959a"
         let stateCode:String = stateCodeTextField.text!
         let cityName:String = cityTextField.text!.stringByReplacingOccurrencesOfString(" ", withString: "_")
         let url:String = "https://api.wunderground.com/api/\(apiKey)/forecast10day/q/\(stateCode)/\(cityName).json"
-        //let url:String = "https://api.wunderground.com/api/b2d73d60ea4b959a/forecast10day/q/IL/Chicago.json"
 
         Alamofire.request(.GET, url)
             .response { request, response, data, error in
